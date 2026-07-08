@@ -49,9 +49,11 @@ discloses it in its header and footer.
 - **One page, zero dependencies.** No frameworks, no fonts fetched from
   anywhere, no analytics, no JavaScript unless a factor literally cannot be
   expressed without it (it can).
-- **The Eleven mark is canonical.** `icon-{180,192,512}.png` are copies of the
-  Eleven Messenger app icon (purple tile, white double-slash "11"). Reference
-  these; never hand-roll a substitute glyph.
+- **No Eleven branding.** 11factor is separate from Eleven Messenger — informed
+  by building it, the way 12factor was separate from Heroku but informed by it.
+  Eleven appears exactly once, as a credit link in the footer. Don't add its
+  icon, its purple, or its name anywhere else on the site; the favicon is the
+  neutral serif "XI" (`favicon.svg`).
 - The site supports light and dark via `prefers-color-scheme` — keep both
   working when touching styles.
 - Deployed via GitHub Pages from `main` (root). Pushing to `main` publishes.

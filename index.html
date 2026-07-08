@@ -5,15 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Eleven Factors</title>
 <meta name="description" content="🤖 Eleven principles for building systems in a world where AI makes hard things easy and impossible things hard. A serious parody of the Twelve-Factor App.">
-<link rel="icon" href="icon-192.png">
-<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
   :root {
     --bg: #ffffff;
     --ink: #1d2029;
     --muted: #647686;
-    --accent: #9456c9;
-    --accent-soft: rgba(148, 86, 201, 0.12);
+    --accent: #a8402f;
+    --accent-soft: rgba(168, 64, 47, 0.1);
     --rule: #e7e9f0;
     --max: 42rem;
   }
@@ -22,8 +21,8 @@
       --bg: #14151c;
       --ink: #eef0f6;
       --muted: #93a8ba;
-      --accent: #b57ae8;
-      --accent-soft: rgba(181, 122, 232, 0.14);
+      --accent: #e08a6d;
+      --accent-soft: rgba(224, 138, 109, 0.13);
       --rule: #2a2e38;
     }
   }
@@ -37,14 +36,9 @@
   }
   header, main, footer { max-width: var(--max); margin: 0 auto; }
   header { padding: 4.5rem 0 1rem; }
-  .mark {
-    display: inline-flex; align-items: center; gap: 0.65rem;
-    text-decoration: none; color: inherit;
-  }
-  .mark img { width: 2.5rem; height: 2.5rem; border-radius: 22%; }
   h1 {
     font-size: 2.6rem; line-height: 1.1; letter-spacing: -0.015em;
-    margin: 1.6rem 0 0.75rem; font-weight: 700;
+    margin: 0 0 0.75rem; font-weight: 700;
   }
   .tagline { font-size: 1.2rem; color: var(--muted); font-style: italic; }
   .robot-note {
@@ -104,10 +98,9 @@
 <body>
 
 <header>
-  <a class="mark" href="/"><img src="icon-192.png" alt="Eleven"></a>
   <h1>The Eleven Factors</h1>
   <p class="tagline">Principles for building systems in a world where AI makes hard things easy and impossible things hard.</p>
-  <p class="robot-note">🤖 This document was written by an LLM, on the ideas and instruction of the humans at <a href="https://elevenmessenger.com">Eleven Messenger</a>. Everything AI-written here is marked, visibly, like this — that's factor <a href="#x">X</a>.</p>
+  <p class="robot-note">🤖 This document was written by an LLM, on the ideas, instruction, and editing of humans. Everything AI-written here is marked, visibly, like this — that's factor <a href="#x">X</a>.</p>
 </header>
 
 <main>
@@ -116,7 +109,7 @@
   <p>In 2011, <a href="https://12factor.net">the twelve-factor app</a> codified how to build software that survived contact with production. It answered the hard questions of its day: where config lives, how dependencies are declared, what a log is. It was right, and it won — so thoroughly that its answers are now defaults you get without asking.</p>
   <p>Then the hard things became easy. AI writes the code, wires the deploy, reads the logs. A person with an idea and an afternoon can now build what once took a funded team a year. And in the same motion, things that used to be impossible became hard-but-possible: software crafted for an audience of five, systems no company would ever have staffed, care applied to corners no budget ever reached.</p>
   <p>When anyone can build anything, <em>how</em> you build stops being the discipline. <strong>What you build, and why, is the discipline.</strong> So these factors are not solely technical. They are about the intent behind systems: what a system promises the people inside it, and how honestly that promise is kept.</p>
-  <p>Like the twelve factors, the eleven are opinions earned by building. They come from making <a href="https://elevenmessenger.com">Eleven</a>, a messenger for families and small groups, in exactly this new world.</p>
+  <p>Like the twelve factors, the eleven are opinions earned by building, not deduced from armchairs. They will be wrong in places. Factor V says that's fine: what matters is that the intent is plain, and that reality can be measured against it.</p>
 
   <ol class="toc">
     <li><a href="#i"><span class="n">I.</span> <span class="t">Trust no one</span> <span class="s">Design so trust is never required</span></a></li>
@@ -224,8 +217,8 @@
 </main>
 
 <footer>
-  <p>🤖 Written by an LLM (Claude), on the ideas, instruction, and editing of the humans at <a href="https://elevenmessenger.com">Eleven Messenger</a>. AI-written text here is always marked and always disclosed — see factor <a href="#x">X</a>, and the <a href="https://github.com/elevenmessenger/11factor">authorship rule in the repo</a>.</p>
-  <p>A serious parody of, and with respect and gratitude to, <a href="https://12factor.net">The Twelve-Factor App</a> by Adam Wiggins and the crew at Heroku.</p>
+  <p>🤖 Written by an LLM (Claude), on the ideas, instruction, and editing of humans. AI-written text here is always marked and always disclosed — see factor <a href="#x">X</a>, and the <a href="https://github.com/elevenmessenger/11factor">authorship rule in the repo</a>.</p>
+  <p>A serious parody of, and with respect and gratitude to, <a href="https://12factor.net">The Twelve-Factor App</a> by Adam Wiggins and the crew at Heroku. Informed, the same way, by building <a href="https://elevenmessenger.com">Eleven</a>.</p>
   <p><a href="https://github.com/elevenmessenger/11factor">Source on GitHub</a> — open, of course (factor <a href="#vi">VI</a>).</p>
 </footer>
 

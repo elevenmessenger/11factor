@@ -38,9 +38,11 @@ that AI must not touch) is in [`CLAUDE.md`](CLAUDE.md).
 
 ## Provenance
 
-Written by an LLM (Claude), on the ideas, instruction, and editing of the
-humans at [Eleven Messenger](https://elevenmessenger.com) — where these factors
-were earned by building, not deduced.
+Written by an LLM (Claude), on the ideas, instruction, and editing of humans.
+11factor is a separate thing from [Eleven](https://elevenmessenger.com), but
+informed by building it — the way the twelve factors were separate from Heroku,
+but informed by it. Eleven gets a credit link in the footer, and no more: the
+factors have to stand on their own.
 
 ## License
 
