@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Eleven Factors</title>
+<meta name="description" content="🤖 Eleven principles for building systems in a world where AI makes hard things easy and impossible things hard. A serious parody of the Twelve-Factor App.">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1d2029;
+    --muted: #647686;
+    --accent: #9456c9;
+    --accent-soft: rgba(148, 86, 201, 0.12);
+    --rule: #e7e9f0;
+    --max: 42rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14151c;
+      --ink: #eef0f6;
+      --muted: #93a8ba;
+      --accent: #b57ae8;
+      --accent-soft: rgba(181, 122, 232, 0.14);
+      --rule: #2a2e38;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 1.0625rem/1.65 Charter, Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 0 1.25rem;
+  }
+  header, main, footer { max-width: var(--max); margin: 0 auto; }
+  header { padding: 4.5rem 0 1rem; }
+  .mark {
+    display: inline-flex; align-items: center; gap: 0.65rem;
+    text-decoration: none; color: inherit;
+  }
+  .mark img { width: 2.5rem; height: 2.5rem; border-radius: 22%; }
+  h1 {
+    font-size: 2.6rem; line-height: 1.1; letter-spacing: -0.015em;
+    margin: 1.6rem 0 0.75rem; font-weight: 700;
+  }
+  .tagline { font-size: 1.2rem; color: var(--muted); font-style: italic; }
+  .robot-note {
+    margin: 1.75rem 0 0; padding: 0.6rem 0.9rem;
+    background: var(--accent-soft); border-radius: 0.5rem;
+    font-size: 0.9rem; color: var(--muted);
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+  .robot-note a { color: var(--accent); }
+  main { padding: 1rem 0 3rem; }
+  section { padding: 2.25rem 0; }
+  section + section { border-top: 1px solid var(--rule); }
+  h2 {
+    font-size: 1.55rem; line-height: 1.25; font-weight: 700;
+    letter-spacing: -0.01em; margin-bottom: 0.4rem;
+  }
+  h2 .numeral { color: var(--accent); font-variant-numeric: lining-nums; }
+  h2 a { color: inherit; text-decoration: none; }
+  h2 a:hover { color: var(--accent); }
+  .epigraph {
+    font-size: 1.15rem; font-style: italic; color: var(--muted);
+    margin-bottom: 1.1rem;
+  }
+  p { margin: 0 0 1.1rem; }
+  p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  strong { font-weight: 700; }
+  ol.toc {
+    list-style: none; counter-reset: factor; margin: 1.25rem 0 0;
+  }
+  ol.toc li {
+    counter-increment: factor;
+    border-top: 1px solid var(--rule);
+    padding: 0.7rem 0;
+  }
+  ol.toc li:last-child { border-bottom: 1px solid var(--rule); }
+  ol.toc a {
+    display: flex; align-items: baseline; gap: 1rem;
+    text-decoration: none; color: inherit;
+  }
+  ol.toc a:hover .t { color: var(--accent); }
+  ol.toc .n {
+    color: var(--accent); font-weight: 700; min-width: 2.4rem;
+    font-variant-numeric: lining-nums;
+  }
+  ol.toc .t { font-weight: 700; }
+  ol.toc .s { color: var(--muted); font-size: 0.95rem; margin-left: auto; text-align: right; display: none; }
+  @media (min-width: 40rem) { ol.toc .s { display: block; } }
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 0 4rem;
+    color: var(--muted); font-size: 0.95rem;
+  }
+  footer p { margin-bottom: 0.6rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="mark" href="/"><img src="icon-192.png" alt="Eleven"></a>
+  <h1>The Eleven Factors</h1>
+  <p class="tagline">Principles for building systems in a world where AI makes hard things easy and impossible things hard.</p>
+  <p class="robot-note">🤖 This document was written by an LLM, on the ideas and instruction of the humans at <a href="https://elevenmessenger.com">Eleven Messenger</a>. Everything AI-written here is marked, visibly, like this — that's factor <a href="#x">X</a>.</p>
+</header>
+
+<main>
+
+<section id="intro">
+  <p>In 2011, <a href="https://12factor.net">the twelve-factor app</a> codified how to build software that survived contact with production. It answered the hard questions of its day: where config lives, how dependencies are declared, what a log is. It was right, and it won — so thoroughly that its answers are now defaults you get without asking.</p>
+  <p>Then the hard things became easy. AI writes the code, wires the deploy, reads the logs. A person with an idea and an afternoon can now build what once took a funded team a year. And in the same motion, things that used to be impossible became hard-but-possible: software crafted for an audience of five, systems no company would ever have staffed, care applied to corners no budget ever reached.</p>
+  <p>When anyone can build anything, <em>how</em> you build stops being the discipline. <strong>What you build, and why, is the discipline.</strong> So these factors are not solely technical. They are about the intent behind systems: what a system promises the people inside it, and how honestly that promise is kept.</p>
+  <p>Like the twelve factors, the eleven are opinions earned by building. They come from making <a href="https://elevenmessenger.com">Eleven</a>, a messenger for families and small groups, in exactly this new world.</p>
+
+  <ol class="toc">
+    <li><a href="#i"><span class="n">I.</span> <span class="t">Trust no one</span> <span class="s">Design so trust is never required</span></a></li>
+    <li><a href="#ii"><span class="n">II.</span> <span class="t">Let kids play</span> <span class="s">If it isn't safe for a child, it isn't safe</span></a></li>
+    <li><a href="#iii"><span class="n">III.</span> <span class="t">Encrypt everything</span> <span class="s">What can be hacked will be hacked</span></a></li>
+    <li><a href="#iv"><span class="n">IV.</span> <span class="t">Great design is for everyone</span> <span class="s">Care is not a premium tier</span></a></li>
+    <li><a href="#v"><span class="n">V.</span> <span class="t">Intent is the system</span> <span class="s">The value is the ideas, and reality measured against them</span></a></li>
+    <li><a href="#vi"><span class="n">VI.</span> <span class="t">Built by humanity, owned by humanity</span> <span class="s">Software built with AI should be open source</span></a></li>
+    <li><a href="#vii"><span class="n">VII.</span> <span class="t">Self-hosting is a right</span> <span class="s">If you can't run it yourself, you don't own it</span></a></li>
+    <li><a href="#viii"><span class="n">VIII.</span> <span class="t">Many small things</span> <span class="s">Greater than one big thing</span></a></li>
+    <li><a href="#ix"><span class="n">IX.</span> <span class="t">Inefficient builds efficient</span> <span class="s">Spend extravagant machines on lean artifacts</span></a></li>
+    <li><a href="#x"><span class="n">X.</span> <span class="t">Humans come first</span> <span class="s">AI is opt-in, never required, always disclosed</span></a></li>
+    <li><a href="#xi"><span class="n">XI.</span> <span class="t">Centralised infrastructure is glue</span> <span class="s">Thin, blind, replaceable</span></a></li>
+  </ol>
+</section>
+
+<section id="i">
+  <h2><a href="#i"><span class="numeral">I.</span> Trust no one</a></h2>
+  <p class="epigraph">"Didn't I warn you not to trust anybody, Dr.&nbsp;Jones?"</p>
+  <p>The old factors assumed an honest operator and a safe server. Assume neither. Not because operators are villains, but because trust that must be extended is a liability that compounds: it can be bought, subpoenaed, phished, or simply leaked by the intern's laptop.</p>
+  <p>So design systems in which trust is never required. The server holds only what it cannot read. The operator can be curious, coerced, or compromised without the people inside the system losing anything. The database can be published in full and contain no secrets — because it never held any.</p>
+  <p>There is one measure of this factor: <strong>what does an attacker get with total control of your infrastructure?</strong> The correct answer is: nothing worth taking.</p>
+</section>
+
+<section id="ii">
+  <h2><a href="#ii"><span class="numeral">II.</span> Let kids play</a></h2>
+  <p class="epigraph">If it isn't safe for a child, it isn't safe.</p>
+  <p>A system is safe when a child can use it. Not "13+ with a checkbox" — age gates and disclaimers outsource safety to the people least equipped to provide it. If your system requires its users to be street-wise to stay unharmed, the system is unsafe; the wisdom requirement is just the bug's fine print.</p>
+  <p>Building for kids forces honest defaults: private by default, no strangers by surprise, no dark patterns, no engagement mechanics tuned against an unfinished brain, no data trail that follows them into adulthood. It rules out entire business models — deliberately.</p>
+  <p>And a system safe enough for a nine-year-old turns out to be exactly the system that respects a ninety-year-old, and everyone in between. Kids are not an edge case. They are the acceptance test.</p>
+</section>
+
+<section id="iii">
+  <h2><a href="#iii"><span class="numeral">III.</span> Encrypt everything</a></h2>
+  <p class="epigraph">What can be hacked will be hacked.</p>
+  <p>On a long enough timeline, every breach probability goes to one. AI has shortened the timeline: attacks that took skilled labour are now scripts, and every stored plaintext is a promise waiting to be broken by someone who was never party to it.</p>
+  <p>So treat breach as a certainty and design for the day after. End-to-end encrypt by default: keys live with people, servers store sealed bytes, and "we take your privacy seriously" becomes a property of the mathematics rather than of the press release. Metadata counts — filenames, screen names, and who-talked-to-whom are content too.</p>
+  <p>Encryption is not a feature tier, an enterprise add-on, or a toggle buried in settings. It is the difference between the breach headline that reads "everything was taken" and the one that reads "there was nothing to take."</p>
+</section>
+
+<section id="iv">
+  <h2><a href="#iv"><span class="numeral">IV.</span> Great design is for everyone</a></h2>
+  <p class="epigraph">Care is not a premium tier.</p>
+  <p>Great design used to be scarce — rationed out to products with venture budgets and design departments, while everything else shipped as forms over data. AI ended the scarcity. Polish in the smallest interaction — the empty state, the error message, the first sixty seconds — is now a choice, not a resource. The excuse is gone.</p>
+  <p>"Everyone" means everyone: kids and grandparents, old phones and slow connections, screen readers and shaky hands, the person who will never read documentation and shouldn't have to. Design that only works for the young, fast, and technical is a prototype.</p>
+  <p>And design is not decoration applied after the fact. It is factor V made visible — the clearest signal of whether the intent behind a system includes you.</p>
+</section>
+
+<section id="v">
+  <h2><a href="#v"><span class="numeral">V.</span> Intent is the system</a></h2>
+  <p class="epigraph">The value of a system is the intent and ideas behind it — and how faithfully reality matches them. Not the source code.</p>
+  <p>Source code was the crown jewels for fifty years. Now it is the cheapest part of any system — regenerable in an afternoon by anyone who understands what the system is <em>for</em>. What cannot be regenerated is the understanding itself: the ideas, the taste, the thousand decisions about what the system promises and refuses.</p>
+  <p>A system is a set of promises made to the people inside it. Its value is the clarity of those promises and the honesty with which running reality keeps them. Judge systems that way. Fund them that way. Fork them that way.</p>
+  <p>The corollary stings: guarding source code guards the wrong thing. Your moat was never the code. It is the coherence of your intent, and the trust you earn by shipping a reality that matches it.</p>
+</section>
+
+<section id="vi">
+  <h2><a href="#vi"><span class="numeral">VI.</span> Built by humanity, owned by humanity</a></h2>
+  <p class="epigraph">Software built with AI should be open source.</p>
+  <p>Every line an AI writes is distilled from the accumulated work of millions of people who wrote, answered, documented, and argued in public. Software built with AI has uncredited co-authors beyond counting. Open source is not generosity here; it is honest accounting. The commons built it, so it returns to the commons.</p>
+  <p>It is also the only way the other factors can be checked. "Trust no one" (I) and "encrypt everything" (III) are claims — and a claim you cannot audit is marketing. Open source turns promises into inspectable properties.</p>
+  <p>And since the value of a system is its intent, not its code (V), you give up almost nothing. Anyone can copy your source. Nobody can copy why.</p>
+</section>
+
+<section id="vii">
+  <h2><a href="#vii"><span class="numeral">VII.</span> Self-hosting is a right</a></h2>
+  <p class="epigraph">Software built with AI should be possible to self-host.</p>
+  <p>If a system can only run on its maker's servers, its users don't have software — they have a subscription to their own data, revocable at any funding round. Every promise the system makes is conditional on a company's continued existence and continued interest in keeping it.</p>
+  <p>AI dissolves the old excuse that self-hosting is too hard for ordinary people: everyone has an ops team now. What remains is the builder's obligation to make it <em>possible</em> — ship the system as something a person can run. One binary. One file of data. One small machine.</p>
+  <p>Self-hosting need not be the default; convenience is allowed. But the exit door must exist and must open. A promise you cannot walk out with is a terms-of-service clause, not a promise.</p>
+</section>
+
+<section id="viii">
+  <h2><a href="#viii"><span class="numeral">VIII.</span> Many small things</a></h2>
+  <p class="epigraph">Many small things are greater than one big thing.</p>
+  <p>One big thing fails big, leaks big, and is worth attacking big. A thousand small instances — each holding one family's, one team's, one town's affairs — offer no jackpot. Small is a security boundary, a blast radius, and a form of respect: your community's system, not your account on someone's platform.</p>
+  <p>Small is also comprehensible, and comprehensible is the new fast. A system that fits in one person's head — or one model's context window — can be audited, rebuilt, and repaired by anyone. Complexity used to be a moat; now it is just a place for bugs to hide.</p>
+  <p>The big thing that remains worth building is the pattern, the protocol, the shape that lets ten thousand small things interoperate without a centre. Build the mold, not the monolith.</p>
+</section>
+
+<section id="ix">
+  <h2><a href="#ix"><span class="numeral">IX.</span> Inefficient builds efficient</a></h2>
+  <p class="epigraph">Use inefficient systems to create efficient systems.</p>
+  <p>A large language model is a spectacularly inefficient way to compute anything — and the finest tool ever made for <em>creating</em> things that compute efficiently. That is not a paradox; it is a division of labour as old as tooling. The kiln burns hot so the brick doesn't have to.</p>
+  <p>So spend the extravagance where it multiplies: at build time. Let the profligate machine write the tight loop, the small binary, the dependency-free page that will run for a decade on a $4 computer without ever needing the machine again. The artifact should not inherit the appetite of its author.</p>
+  <p>Beware the inversion — wiring an LLM into the hot path of a system because it was the easiest thing to reach for. That is bringing the kiln to the dinner table. (It also violates factor X.)</p>
+</section>
+
+<section id="x">
+  <h2><a href="#x"><span class="numeral">X.</span> Humans come first</a></h2>
+  <p class="epigraph">AI is not the default. AI is opt-in, never required, always disclosed.</p>
+  <p>These factors exist because of AI, and this one keeps it in its place. A system is for the people inside it. No one should have to talk to a machine to use a thing, no one should be surprised to learn they were talking to one, and nothing essential should sit behind an AI that a human never chose.</p>
+  <p>So: <strong>opt-in</strong> — AI arrives because a person invited it, and leaves when a person removes it. <strong>Never required</strong> — every path through the system works with the AI switched off. <strong>Always disclosed</strong> — machine-made words and machine members are visibly marked, the way this document is marked 🤖, so no one ever has to wonder.</p>
+  <p>Done this way, an AI in a system is a guest with a name tag. Done any other way, it is an infestation.</p>
+</section>
+
+<section id="xi">
+  <h2><a href="#xi"><span class="numeral">XI.</span> Centralised infrastructure is glue</a></h2>
+  <p class="epigraph">Thin, blind, replaceable.</p>
+  <p>Purity says decentralise everything; reality keeps a few jobs that genuinely want a centre — push notification relays, discovery, backup stores, the boring plumbing between sovereign small things (VIII). Fine. Let them be central. But let them be <em>glue</em>: the thin layer that holds parts together and knows nothing about what it holds.</p>
+  <p>Glue is blind — a relay forwards sealed bytes it cannot open; a home server stores encrypted backups it cannot read. Glue is thin — auth tokens and routing, never content, never keys. And glue is replaceable — anyone can run their own batch, and swapping it breaks nothing that matters.</p>
+  <p>The test is the subpoena, the seizure, the hack: when the central piece falls, the people inside the system lose at most some convenience — never a word they said. If losing your centre loses their content, you didn't build glue. You built a vault with your name on the door, and factor I already told you how that story ends.</p>
+</section>
+
+</main>
+
+<footer>
+  <p>🤖 Written by an LLM (Claude), on the ideas, instruction, and editing of the humans at <a href="https://elevenmessenger.com">Eleven Messenger</a>. AI-written text here is always marked and always disclosed — see factor <a href="#x">X</a>, and the <a href="https://github.com/elevenmessenger/11factor">authorship rule in the repo</a>.</p>
+  <p>A serious parody of, and with respect and gratitude to, <a href="https://12factor.net">The Twelve-Factor App</a> by Adam Wiggins and the crew at Heroku.</p>
+  <p><a href="https://github.com/elevenmessenger/11factor">Source on GitHub</a> — open, of course (factor <a href="#vi">VI</a>).</p>
+</footer>
+
+</body>
+</html>
