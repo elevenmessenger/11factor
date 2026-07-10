@@ -1,7 +1,7 @@
 # 🤖 The Eleven Factors — 11factor
 
 Eleven principles for building systems in a world where AI makes hard things
-easy and impossible things hard. A serious parody of — and with respect and
+easy and impossible things possible. A serious parody of — and with respect and
 gratitude to — [The Twelve-Factor App](https://12factor.net).
 
 The twelve factors told you *how* to build. Now that AI has made the how cheap,

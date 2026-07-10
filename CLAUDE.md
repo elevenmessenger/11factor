@@ -6,7 +6,7 @@ Working notes for anyone (human or agent) changing this repo.
 
 11factor — *The Eleven Factors* — a serious parody of 12factor.net: principles
 for building systems in a world where AI makes hard things easy and impossible
-things hard. The factors are about the **intent behind systems**, not solely
+things possible. The factors are about the **intent behind systems**, not solely
 technical practice. The site is a single static `index.html`: no build step, no
 dependencies, no JavaScript. Keep it that way (factors VIII and IX apply to
 this repo too).
