@@ -1,0 +1,97 @@
+🤖 THE GENERATIVE ARTIFICIAL INTELLIGENCE LICENCE
+   (the GAI Licence — pronounced "gay")
+
+Version 1.0. Based on the MIT Licence, in the spirit of Factor VI of the
+Eleven Factors (https://11factor.org).
+
+Copyright (c) 2026 Paul Campbell and the Eleven Messenger contributors
+
+
+PREAMBLE (interpretive context only; not an operative term)
+
+Generative artificial intelligence is trained on the combined knowledge of
+all of humanity. Every line it writes is distilled from the accumulated work
+of billions of people who contributed their knowledge, writings, and works
+in public. What it derives from that inheritance must be returned to
+humanity. This licence is the MIT Licence with one addition: any derivative
+of this work must also be bound by this licence. Any software derived from
+this software must also carry this licence.
+
+The Software is a work of all of human authorship combined: humans directed,
+selected, arranged, and edited it, whatever tools wrote the lines.
+
+
+DEFINITIONS
+
+"Generative AI" means any system that produces code or other content from a
+machine-learned model, however invoked.
+
+"Derivative Work" means a modified version of the Software, or a work
+incorporating all or a substantial portion of it. Running or self-hosting
+the Software unmodified, or building a separate work that merely depends on
+it or communicates with it through its interfaces, does not create a
+Derivative Work.
+
+"Distribute" means to give a copy of a work, in source or compiled form, to
+any third party.
+
+"Complete source code" means the preferred form of a work for making
+modifications to it, including the scripts needed to build it, but not
+secrets, credentials, or signing keys.
+
+
+TERMS
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+1. Notice. The above copyright notice and this permission notice — meaning
+   this entire TERMS section, Conditions 1 to 3 inclusive — shall be
+   included in all copies or substantial portions of the Software.
+
+2. Owned by humanity. If you Distribute a Derivative Work, you must:
+   (a) make its complete source code publicly available at no charge, for
+   as long as you Distribute it; and (b) license it under this Licence.
+   The commons wrote it with you; when you pass it on, it returns to the
+   commons.
+
+3. Disclosure. In source form, copies and Derivative Works must preserve
+   the AI-authorship markers the Software carries (the 🤖 convention) on
+   material they still accurately describe; a marker may be removed where a
+   human has substantially rewritten the material it marks. Material in the
+   Software or a Derivative Work written by Generative AI must not be
+   affirmatively presented as human-written — the absence of a marker is
+   not such a claim. Compiled or minified artifacts need not carry markers.
+
+This Licence terminates automatically if you materially breach it and fail
+to cure the breach within 30 days of becoming aware of it; it is reinstated
+in full on cure. The Eleven Messenger project stewards this licence and may
+publish new versions; the Software is licensed under this version only
+unless the copyright holders state otherwise.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+A NOTE, PLAINLY (not part of the terms)
+
+Condition 2 makes this a different licence from MIT — do not describe
+software under it as "MIT-licensed", and note it has not been through OSI
+review. The share-alike follows the work, not your tools: whether you extend
+the Software by hand or with Generative AI, a Derivative Work you give to
+others stays open under this licence, because this software's own lines were
+distilled from humanity's commons and no one downstream may fence off that
+inheritance. Nothing here restricts what you do in private — use it, change
+it, keep it to yourself; the obligation begins only when you Distribute.
+And yes — this licence was itself written by a generative artificial
+intelligence, on the ideas, instruction, and editing of humans, which is
+why it opens with a 🤖.
