@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The GAI Licence</title>
+<meta name="description" content="🤖 The Generative Artificial Intelligence Licence — the MIT Licence with two additions, in the spirit of Factor VI of the Eleven Factors. Canonical text and version history.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1d2029;
+    --muted: #647686;
+    --accent: #a8402f;
+    --accent-soft: rgba(168, 64, 47, 0.1);
+    --rule: #e7e9f0;
+    --max: 42rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14151c;
+      --ink: #eef0f6;
+      --muted: #93a8ba;
+      --accent: #e08a6d;
+      --accent-soft: rgba(224, 138, 109, 0.13);
+      --rule: #2a2e38;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 1.0625rem/1.65 Charter, Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 0 1.25rem;
+  }
+  header, main, footer { max-width: var(--max); margin: 0 auto; }
+  header { padding: 4.5rem 0 1rem; }
+  h1 {
+    font-size: 2.6rem; line-height: 1.1; letter-spacing: -0.015em;
+    margin: 0 0 0.75rem; font-weight: 700;
+  }
+  .tagline { font-size: 1.2rem; color: var(--muted); font-style: italic; }
+  main { padding: 1rem 0 3rem; }
+  section { padding: 2.25rem 0; }
+  section + section { border-top: 1px solid var(--rule); }
+  h2 {
+    font-size: 1.55rem; line-height: 1.25; font-weight: 700;
+    letter-spacing: -0.01em; margin-bottom: 0.75rem;
+  }
+  p { margin: 0 0 1.1rem; }
+  p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  strong { font-weight: 700; }
+  ul.versions { list-style: none; margin: 0; }
+  ul.versions li {
+    border-top: 1px solid var(--rule);
+    padding: 0.9rem 0;
+  }
+  ul.versions li:last-child { border-bottom: 1px solid var(--rule); }
+  ul.versions .v { font-weight: 700; }
+  ul.versions .d { color: var(--muted); font-variant-numeric: lining-nums; }
+  pre.licence {
+    font: 0.82rem/1.55 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    background: var(--accent-soft);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 1.25rem 1.4rem;
+    margin: 1.1rem 0;
+  }
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 0 4rem;
+    color: var(--muted); font-size: 0.95rem;
+  }
+  footer p { margin-bottom: 0.6rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>The GAI Licence</h1>
+  <p class="tagline">The Generative Artificial Intelligence Licence — the MIT Licence with two additions, in the spirit of factor <a href="../#vi">VI</a>.</p>
+</header>
+
+<main>
+
+<section id="about">
+  <p>Generative AI is trained on the combined knowledge of all of humanity, so what it derives from that inheritance must be returned to humanity. The GAI Licence is the MIT Licence with two additions: any derivative you distribute stays open, bound by this same licence, and AI-written material keeps its authorship marker (🤖, or its plain-text form <code>[AI]</code>).</p>
+  <p>It is <strong>not</strong> MIT — don't describe software under it as "MIT-licensed" — and it has not been through OSI review. Its share-alike follows the work, not your tools, and only when you distribute: running it, changing it, keeping it to yourself owes nothing.</p>
+  <p>This page is the licence's stable home: the Eleven Messenger project stewards it and publishes each version here, so downstream users can always verify which text governs a copy they hold.</p>
+</section>
+
+<section id="versions">
+  <h2>Versions</h2>
+  <ul class="versions">
+    <li><span class="v"><a href="v1.1.txt">Version 1.1</a></span> <span class="d">— 2026-07-14, current.</span> Tightened after external review: defined "Publicly available" and made explicit that the source obligation ends when distribution stops; the marker convention became a versioned specification (<a href="ai-markers-v1.0.md">Marker Specification v1.0</a>) with a plain-text <code>[AI]</code> fallback; termination cure now runs from notice rather than awareness; added the SPDX-style identifier <code>LicenseRef-GAI-1.1</code> and this stable URL; the note now records that GPL-incompatibility and the distribute-only trigger (network use owes nothing) are deliberate.</li>
+    <li><span class="v"><a href="v1.0.txt">Version 1.0</a></span> <span class="d">— 2026-07-08.</span> The original text.</li>
+  </ul>
+</section>
+
+<section id="text">
+  <h2>The licence (v1.1)</h2>
+  <p>The canonical form is the plain-text file: <a href="v1.1.txt">v1.1.txt</a>. Reproduced here in full:</p>
+  <pre class="licence">🤖 THE GENERATIVE ARTIFICIAL INTELLIGENCE LICENCE
+   (the GAI Licence — pronounced "gay")
+
+Version 1.1. SPDX-style identifier: LicenseRef-GAI-1.1. Based on the MIT
+Licence, in the spirit of Factor VI of the Eleven Factors
+(https://11factor.org). The canonical text and version history of this
+licence are published at https://11factor.org/gai-licence (the "licence
+URL").
+
+Copyright (c) 2026 Paul Campbell and the Eleven Messenger contributors
+
+
+PREAMBLE (interpretive context only; not an operative term)
+
+Generative artificial intelligence is trained on the combined knowledge of
+all of humanity. Every line it writes is distilled from the accumulated work
+of billions of people who contributed their knowledge, writings, and works
+in public. What it derives from that inheritance must be returned to
+humanity. This licence is the MIT Licence with two additions: any derivative
+of this work that is passed on to others must be passed on open, under this
+licence; and material written by generative artificial intelligence keeps
+its authorship marker. Any software derived from this software must also
+carry this licence.
+
+The Software is a work of all of human authorship combined: humans directed,
+selected, arranged, and edited it, whatever tools wrote the lines.
+
+
+DEFINITIONS
+
+"Generative AI" means any system that produces code or other content from a
+machine-learned model, however invoked.
+
+"Derivative Work" means a modified version of the Software, or a work
+incorporating all or a substantial portion of it. Running or self-hosting
+the Software, modified or not, or building a separate work that merely
+depends on it or communicates with it through its interfaces, does not by
+itself create or Distribute a Derivative Work.
+
+"Distribute" means to give a copy of a work, in source or compiled form, to
+any third party.
+
+"Publicly available" means obtainable by any member of the public at no
+charge and on no conditions beyond this Licence — a public source
+repository, or a complete source archive plainly linked from wherever the
+work is offered, each suffice.
+
+"Complete source code" means the preferred form of a work for making
+modifications to it, including the scripts needed to build it, but not
+secrets, credentials, or signing keys.
+
+"Marker Specification" means version 1.0 of the AI-authorship marker
+convention distributed with the Software (docs/ai-markers.md) and published
+at the licence URL. In brief: a visible 🤖 — or its plain-text form,
+"[AI]" — marks material written by Generative AI, and a marker on a heading
+covers the material beneath it.
+
+
+TERMS
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+1. Notice. The above copyright notice and this permission notice — meaning
+   this entire TERMS section, Conditions 1 to 3 inclusive — shall be
+   included in all copies or substantial portions of the Software.
+
+2. Owned by humanity. If you Distribute a Derivative Work, you must:
+   (a) make its complete source code Publicly available for as long as you
+   continue to Distribute it — the obligation ends when you stop; and
+   (b) license it under this Licence. The commons wrote it with you; when
+   you pass it on, it returns to the commons.
+
+3. Disclosure. In source form, copies and Derivative Works must preserve
+   the AI-authorship markers the Software carries, as defined by the Marker
+   Specification, on material they still accurately describe; a marker may
+   be removed where a human has substantially rewritten the material it
+   marks. Material in the Software or a Derivative Work written by
+   Generative AI must not be affirmatively presented as human-written — the
+   absence of a marker is not such a claim. Compiled or minified artifacts
+   need not carry markers.
+
+This Licence terminates automatically if you materially breach it and fail
+to cure the breach within 30 days after a copyright holder notifies you of
+it; it is reinstated in full on cure. The Eleven Messenger project stewards
+this licence and may publish new versions at the licence URL; the Software
+is licensed under this version only unless the copyright holders state
+otherwise.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+A NOTE, PLAINLY (not part of the terms)
+
+Condition 2 makes this a different licence from MIT — do not describe
+software under it as "MIT-licensed". It has not been through OSI review,
+and it is not compatible with the GPL family in either direction: its
+conditions are "further restrictions" there, and the GPL's are here. The
+share-alike follows the work, not your tools: whether you extend the
+Software by hand or with Generative AI, a Derivative Work you give to
+others stays open under this licence, because this software's own lines were
+distilled from humanity's commons and no one downstream may fence off that
+inheritance. Nothing here restricts what you do in private — use it, change
+it, keep it to yourself; the obligation begins only when you Distribute.
+That trigger is deliberate: running the Software, or a Derivative Work, as
+a service for others is use, not Distribution, and owes nothing back — this
+licence polices passing the work on, not running it. And yes — this licence
+was itself written by a generative artificial intelligence, on the ideas,
+instruction, and editing of humans, which is why it opens with a 🤖.</pre>
+</section>
+
+<section id="markers">
+  <h2>The Marker Specification</h2>
+  <p>Condition 3 binds a versioned convention for AI-authorship markers. The current specification is <a href="ai-markers-v1.0.md">version 1.0</a>: a visible 🤖 (or <code>[AI]</code> where the emoji can't survive) marks AI-written material, a marker on a heading cascades over what's beneath it, absence of a marker claims nothing, and a marker comes off only when a human has substantially rewritten what it marked.</p>
+</section>
+
+</main>
+
+<footer>
+  <p>🤖 Written by an LLM (Claude), on the ideas, instruction, and editing of humans — which is the licence's own subject, so of course it's marked. See factor <a href="../#x">X</a>.</p>
+  <p>Stewarded by the <a href="https://elevenmessenger.com">Eleven Messenger</a> project. Part of <a href="../">The Eleven Factors</a>.</p>
+</footer>
+
+</body>
+</html>
