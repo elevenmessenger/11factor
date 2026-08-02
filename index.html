@@ -185,28 +185,28 @@
   <h2><a href="#v"><span class="numeral">V.</span> Intent is the system</a></h2>
   <p class="epigraph">How closely does a system get to what it was designed to do?</p>
   <p>Until very recently, good code has been the differentiating factor between good software and great. In 2026, that changed, with the expanding capabilities of computers to generate code on a par or in excess of the abilities of many software developers.</p>
-  <p>One positive benefit of this is that it expands the overall capabilities of individual software makers far beyond their skillset. It’s still important that software code functions, that it is tested, verified, and audited, but LLM tools themselves are also very good at reviewing their own work, refactoring, and following established best practice.</p>
+  <p>One positive benefit of this is that it expands the overall capabilities of individual software makers far beyond their skillset. It’s still important that software code functions, that it is tested, verified, and audited. Good software development practices still matter, LLM tools themselves are also very good at following good practices if directed toward them, of reviewing their own work, refactoring, and systematically following process.</p>
   <p>When code is no longer the asset it once was, the value of a system shifts. If code is no longer the asset, the new asset is: what is the system supposed to do? The measure is: does it do what it is supposed to do?</p>
-  <p>Intent, and the manifestation of that intent (via code and prompts), becomes the new codification of the system, and generated code becomes simply the material with which the intent is spun.</p>
+  <p>Imagine as a user of a system, you were able to evaluate the decisions that went into shaping the system, both well-intentioned and the not-so-well intentioned. "Intent is the system" leads to asking whether these kinds of things are possible. What if, in addition to the code, we shared the ideas that led to the code? This leads to open record-keeping, like an open prompt ledger for AI-created systems, and potentially an open decision ledger for non-AI systems.</p>
 </section>
 
 <section id="vi">
   <h2><a href="#vi"><span class="numeral">VI.</span> Built by humanity, owned by humanity</a></h2>
   <p class="epigraph">Software built with AI should be open source.</p>
-  <p>There are those who believe that the way in which AI systems have been trained constitutes theft. There are others who say that public data was fair game to ingest since it was public. What nobody disagrees on: the data was used without the explicit consent of the authors.</p>
+  <p>There are those who believe that the way in which AI systems have been trained constitutes theft. There are others who say that public data was fair game to ingest since it was public. What nobody disagrees on: the data was used to train systems without the explicit consent of the authors.</p>
   <p>There are ideologies and science fiction alike that believe that everything created by any human ought to immediately transfer into the public domain, share-and-share-alike. Today’s society hasn’t yet reached that pinnacle of the commons, and so copyright and private ownership of one’s own works prevail.</p>
   <p>However, never before have we had such ambiguity about where the skills and ideas and intent of the creator ends and the synthesis of all that came before begins. We are in interesting times.</p>
   <p>It seems though, that logically, if a tool synthesises as much of humanity’s collected knowledge as its creators could ingest to train it, then the moral obligation on the user of that tool is to return the output to the collective.</p>
-  <p>For software, the conclusion is that there ought to be no other software than open source.</p>
+  <p>For software, the conclusion is that there ought to be no other software than open source. And further, if open source software becomes as convenient, as reliable, as easy-to-adopt, and as secure as proprietary software, then the only differentiator between open source and proprietary becomes: trust. Finally, if trust is final differentiator, who will you trust more: the vendor whose code is open source that you or others can scrutinise and verify, or the vendor who chooses to keep theirs private?</p>
 </section>
 
 <section id="vii">
   <h2><a href="#vii"><span class="numeral">VII.</span> Self-hosting is a right</a></h2>
-  <p class="epigraph">If you can't run it yourself, you don't own it.</p>
+  <p class="epigraph">🤖 If you can't run it yourself, you don't own it.</p>
   <p>Infrastructure models for computing ebb and flow. Thin-client interfacing with a mainframe. On premise everything. The evolution of SaaS where computers more powerful than the servers they run on consume services via thin web clients. And now the same is happening with AI.</p>
-  <p>Self-hosting is almost always the wrong approach when building resilient systems, and almost always the right approach when building secure ones. The full eleven factors make the case that self-hosting ought not necessarily be required for security, but the seventh factor is that it should always be possible.</p>
+  <p>Self-hosting is almost always the wrong approach when building resilient systems, and almost always the right approach when building secure, and indeed sovereign ones. The full eleven factors make the case that self-hosting ought not necessarily be required for security, but the seventh factor is that it should always be possible, without compromise.</p>
   <p>Eleven factor software, in an absolute sense, should essentially be uncontrollable, unbuyable by an external party. If, at any time, someone who uses an eleven factor app decides that they want to run it on their own hardware, this should be built in.</p>
-  <p>Further: the ideal of this model is that self-hosting is not penalised in any way, unless a decision is made explicitly.</p>
+  <p>The ideal of this model is that self-hosting is not penalised in any way, unless a decision is made explicitly.</p>
   <p>In practice, this means: self-hosting and "cloud" hosting are functionally the same. Self-hosters gain access to relay services, broker services etc. to allow for a "great-design" experience, but none of the centralised infrastructure is required.</p>
   <p>Finally, at any point, the self-hoster should be able to decide to pin to any version and no longer receive updates they don't want. Most folks will want to be on the latest stable release, but that is a choice, not an enforcement.</p>
 </section>
@@ -214,13 +214,14 @@
 <section id="viii">
   <h2><a href="#viii"><span class="numeral">VIII.</span> Many small things</a></h2>
   <p class="epigraph">Greater than one big thing.</p>
-  <p>There are people who think that monopolies are the singular goal of system creation. This factor rejects that. There are those who think that big systems should be broken down into tiny parts to the nth degree. This factor also rejects that.</p>
-  <p>The 8th factor is about designing systems inspired by rebel cells (see <a href="https://memory-alpha.fandom.com/wiki/Bajoran_Resistance">the Bajoran resistance</a>). Small autonomous units: take one out and the rest continues.</p>
-  <p>"Many small things" points to a healthy biological system, as opposed to the proliferation of hypergrowth cells that eventually poison the host and suck the life out of the system. In biology, we call that cancer.</p>
+  <p>There are people who think that monopolies are the singular goal of system creation. This factor rejects that. There are those who think that big systems should be broken down into tiny parts to the nth degree. This factor also doesn’t fully accept that.</p>
+  <p>This factor is about building resilience into the system, rather than breaking things apart, and not necessarily splitting systems into tiny parts, but making complex systems deployable in small units.</p>
+  <p>The systems-thinking here is inspired by rebel cells (see <a href="https://memory-alpha.fandom.com/wiki/Bajoran_Resistance">the Bajoran resistance</a>). Small autonomous units: take one out and the rest continues. Each unit is capable of a wide range of abilities, not just a thin-slice (e.g. this isn't the unix philosophy, although that feeds in).</p>
+  <p>"Many small things" is also inspired by healthy biological systems, as opposed to the proliferation of hypergrowth cells that eventually poison the host and suck the life out of the system. In biology, we call that cancer.</p>
   <p>Many small things are more securable. Attack targets become more distributed. The economics of breaking into any cell—or instance—become lower return on effort.</p>
   <p>Small systems are also much easier to understand, to distribute, and to run locally.</p>
   <p>Small systems are easier to modify, to customise, and ultimately, to own.</p>
-  <p>The result: every user of software built this way is in control: control of where their compute and storage is hosted, control of whether they receive automatic updates, control of whether they update at all.</p>
+  <p>The result: every user of software systems built this way is in control: control of where their compute and storage is hosted, control of whether they receive automatic updates, control of whether they update at all.</p>
 </section>
 
 <section id="ix">
@@ -231,7 +232,8 @@
   <p>Citing AI’s proliferation as "inevitable", and attempting to force it into every aspect of our daily lives and society is as short-sighted and annoying as it is morally reprehensible in a climate emergency. We’ve seen this before with cars, and a systemic campaign over 100 years to villainise harmless pedestrians and cyclists without acknowledging that people in cars are one small slip away from causing death from the moment they start the engine.</p>
   <p>This isn’t to say cars are not amazing. They enrich people’s lives and unlock possibilities beyond imagining before their creation. Cars have their place across a wide range of purposes.</p>
   <p>There is a similarity here with AI. Where cars have been forced upon us to do tasks that would be orders of magnitude more efficient on, for example, a bicycle, AI is mooted as the solution for everything.</p>
-  <p>There is a better analogy: factories. Factories sit at the intersection of innovation and regression: the ability to mass produce items at great ecological cost. Factories that produce cars amplify the problem, where factories that produce bicycles justify their cost by producing clean, efficient outputs.</p>
+  <p>There is another analogy: factories. Factories sit at the intersection of innovation and regression: the ability to mass produce items at great ecological cost. Factories that produce cars amplify the problem, where factories that produce bicycles justify their cost by producing clean, efficient outputs.</p>
+  <p>One more: plastic. Plastic has allowed us to produce complex solutions at lower cost than more natural ingredients. But of course, plastics ended up being over-used and we ended up with the proliferation of single-use plastics for things (like bottles) that would be better off with more sustainable solutions. Same goes for the proliferation of single-use AI-generated tools.</p>
   <p>Listen to how the robots describe themselves:</p>
   <blockquote><p>🤖 A large language model is a spectacularly inefficient way to compute anything — and the finest tool ever made for creating things that compute efficiently. That is not a paradox; it is a division of labour as old as tooling. The kiln burns hot so the brick doesn't have to.</p></blockquote>
   <p>It’s worth considering that cutting edge systems that burn carbon may well be justified to create efficient systems that run on old hardware with performance that today’s mid-range systems can only dream of.</p>
@@ -240,7 +242,7 @@
 <section id="x">
   <h2><a href="#x"><span class="numeral">X.</span> Humans come first</a></h2>
   <p class="epigraph">AI is opt-in, never required, always disclosed.</p>
-  <p>Surely this is just common sense? It’s very tempting to leap ahead to a Star Trek world where anything is replicable on demand. That world is yet to arrive. In the meantime, building software that cannot be operated by humans seems foolhardy.</p>
+  <p>Surely this is just common sense? It’s very tempting to leap ahead to a science fiction world where anything is replicable on demand. That world is yet to arrive. In the meantime, building software that cannot be operated by humans seems foolhardy.</p>
   <p>Software for humans built by humans should be usable, reworkable, and maintainable by humans, no matter the tooling. AI systems are great at synthesis: taking existing ideas and using them to produce new output. Whether they become great at invention remains to be seen, but a human operator with LLM assistance has access to a larger library: tools and abilities that were out of reach for the sheer effort of researching all of the options.</p>
   <p>The old adage is "the best tool for the job", which has always been bendable to fit any software choice, but with assistance, choosing "the best tool for the job" is within reach for any category: particularly when it comes to choosing tools, built by humans, that already exist to solve human-shaped problems.</p>
   <p>Building for human maintainability leads to naturally more resilient systems, and the added benefit is that since AI is trained on human-shaped patterns, tools optimised for humans tend to work better for AIs too.</p>
@@ -250,10 +252,10 @@
 <section id="xi">
   <h2><a href="#xi"><span class="numeral">XI.</span> Centralised infrastructure is glue</a></h2>
   <p class="epigraph">Thin, blind, replaceable.</p>
-  <p>The final factor is the piece that takes all the principles above and compels us to build <em>usable</em> systems with all of the attributes above. The previous ten factors are novel. All of them have examples and working models in the wild. What seems rarer are systems that contain all the factors, and conform to a usability standard that means they are usable by everyone.</p>
-  <p>To turn to wit: open-source products and systems, self-hosted tools and services are not "sticky". Deploying open-source and self-hosted systems at scale often comes with costs: overhead of setup, overhead of maintenance, conceptual overhead to carry for the people who want to use the systems.</p>
+  <p>The final factor is the piece that takes all the principles above and compels us to build systems that feel uncompromising in their user-experience and ability to get started. The previous ten factors are not novel. All of them have examples and working models in the wild. What seems rarer are systems that contain all the factors, and conform to a standard of design and aesthetics, form and function that means they are usable by everyone.</p>
+  <p>To turn to wit: open-source products and systems, self-hosted tools and services are not "sticky". Deploying open-source and self-hosted systems at scale often comes with costs: overhead of setup, overhead of maintenance, conceptual overhead to carry for the people who want to use the systems. Proprietary systems tend to be more turn-key: much less conceptual overhead to get started.</p>
   <p>Glue infrastructure aims to create the illusion of centralisation without the traditional compromises, whilst remaining decentralised, with self-hosting as first class.</p>
-  <p>Examples of glue infrastructure: credential vaults, push-notification relays, oauth brokers, image and service proxies. All of these services can be provided to instances in a decentralised system without compromising the security of the instances. Glue infrastructure exists to make using the system seamless for those who value simplicity and efficiency. One signin: all your stuff. Complexity is hidden, never revealed.</p>
+  <p>Examples of glue infrastructure: credential vaults, push-notification relays, oauth brokers, image and service proxies. All of these services can be provided to instances in a decentralised system without compromising the security of the instances. Glue infrastructure exists to make using the system seamless for those who value simplicity and efficiency. One signin: all your stuff. "🤖 Complexity is hidden, never revealed."</p>
   <p>For those who wish to self-host, glue infrastructure is offered as optional, but not required, and for those who wish to host their own glue infrastructure, that’s always a configuration change away.</p>
   <p>When you want to make your open-source, decentralised system sticky, bring the glue.</p>
 </section>
