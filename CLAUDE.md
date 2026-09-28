@@ -7,7 +7,9 @@ Working notes for anyone (human or agent) changing this repo.
 11factor — *The Eleven Factors* — a serious parody of 12factor.net: principles
 for building systems in a world where AI makes hard things easy and impossible
 things possible. The factors are about the **intent behind systems**, not solely
-technical practice. The site is a single static `index.html`: no build step, no
+technical practice. The site is hand-written static HTML: `index.html` holds
+the introduction and the contents list, and each factor is its own mini-essay
+at `i/index.html` … `xi/index.html`, all sharing `style.css`. No build step, no
 dependencies, no JavaScript. Keep it that way (factors VIII and IX apply to
 this repo too).
 
@@ -46,12 +48,22 @@ discloses it in its header and footer.
 
 ## Conventions
 
-- **One page, zero dependencies.** No frameworks, no fonts fetched from
+- **Plain pages, zero dependencies.** No frameworks, no fonts fetched from
   anywhere, no analytics, no JavaScript unless a factor literally cannot be
   expressed without it (it can).
+- **A page per factor.** Each factor page repeats the same frame: the link
+  home, the numeral and title, the epigraph, the robot note, the prev/next
+  links, and the footer. With no build step that frame is copied eleven
+  times. Change one and change them all, and keep a factor's title and
+  one-line summary in step with its entry in the contents list on
+  `index.html` (the summary doubles as the page's meta description).
+- **Old anchors still land.** Links like `11factor.org/#vi` predate the
+  split. Each contents entry on `index.html` keeps the factor's id, so those
+  links scroll to the right line of the list. Don't drop the ids.
 - **No Eleven branding.** 11factor is separate from Eleven Messenger — informed
   by building it, the way 12factor was separate from Heroku but informed by it.
-  Eleven appears exactly once, as a credit link in the footer. Don't add its
+  Eleven appears exactly once, as a credit link in the home page's footer
+  (the factor pages' footers leave it out). Don't add its
   icon, its purple, or its name anywhere else on the site; the favicon is the
   neutral serif "XI" (`favicon.svg`).
 - The site supports light and dark via `prefers-color-scheme` — keep both
