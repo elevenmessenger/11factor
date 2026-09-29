@@ -8,9 +8,11 @@ The twelve factors told you *how* to build. Now that AI has made the how cheap,
 the eleven factors are about *what* deserves to be built and *why*: the factors
 are no longer solely technical, but based on the intent behind systems.
 
-The whole site is one static page: [`index.html`](index.html). No build step,
-no dependencies, no JavaScript. Factor IX applies: an extravagant machine wrote
-it once; it costs nothing to run forever.
+The site is plain static HTML. [`index.html`](index.html) holds the introduction
+and the list of factors, and each factor has its own page, from
+[`i/`](i/index.html) to [`xi/`](xi/index.html). No build step, no dependencies,
+no JavaScript. Factor IX applies: an extravagant machine wrote it once; it costs
+nothing to run forever.
 
 ## The factors
 

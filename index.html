@@ -6,107 +6,14 @@
 <title>The Eleven Factors</title>
 <meta name="description" content="If people insist on using AI (and they do), then there should be a set of principles to follow to produce more open, shareable, more efficient, distributable, equitable apps. A serious parody of the Twelve-Factor App.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<style>
-  :root {
-    --bg: #ffffff;
-    --ink: #1d2029;
-    --muted: #647686;
-    --accent: #a8402f;
-    --accent-soft: rgba(168, 64, 47, 0.1);
-    --rule: #e7e9f0;
-    --max: 42rem;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #14151c;
-      --ink: #eef0f6;
-      --muted: #93a8ba;
-      --accent: #e08a6d;
-      --accent-soft: rgba(224, 138, 109, 0.13);
-      --rule: #2a2e38;
-    }
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: var(--bg);
-    color: var(--ink);
-    font: 400 1.0625rem/1.65 Charter, Georgia, "Times New Roman", serif;
-    -webkit-font-smoothing: antialiased;
-    padding: 0 1.25rem;
-  }
-  header, main, footer { max-width: var(--max); margin: 0 auto; }
-  header { padding: 4.5rem 0 1rem; }
-  h1 {
-    font-size: 2.6rem; line-height: 1.1; letter-spacing: -0.015em;
-    margin: 0 0 0.75rem; font-weight: 700;
-  }
-  .tagline { font-size: 1.2rem; color: var(--muted); font-style: italic; }
-  .robot-note {
-    margin: 1.75rem 0 0; padding: 0.6rem 0.9rem;
-    background: var(--accent-soft); border-radius: 0.5rem;
-    font-size: 0.9rem; color: var(--muted);
-    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-  }
-  .robot-note a { color: var(--accent); }
-  main { padding: 1rem 0 3rem; }
-  section { padding: 2.25rem 0; }
-  section + section { border-top: 1px solid var(--rule); }
-  h2 {
-    font-size: 1.55rem; line-height: 1.25; font-weight: 700;
-    letter-spacing: -0.01em; margin-bottom: 0.4rem;
-  }
-  h2 .numeral { color: var(--accent); font-variant-numeric: lining-nums; }
-  h2 a { color: inherit; text-decoration: none; }
-  h2 a:hover { color: var(--accent); }
-  .epigraph {
-    font-size: 1.15rem; font-style: italic; color: var(--muted);
-    margin-bottom: 1.1rem;
-  }
-  p { margin: 0 0 1.1rem; }
-  p:last-child { margin-bottom: 0; }
-  blockquote {
-    margin: 0 0 1.1rem; padding: 0.15rem 0 0.15rem 1rem;
-    border-left: 3px solid var(--accent); font-style: italic;
-  }
-  blockquote p { margin-bottom: 0.6rem; }
-  blockquote p:last-child { margin-bottom: 0; }
-  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-  strong { font-weight: 700; }
-  ol.toc {
-    list-style: none; counter-reset: factor; margin: 1.25rem 0 0;
-  }
-  ol.toc li {
-    counter-increment: factor;
-    border-top: 1px solid var(--rule);
-    padding: 0.7rem 0;
-  }
-  ol.toc li:last-child { border-bottom: 1px solid var(--rule); }
-  ol.toc a {
-    display: flex; align-items: baseline; gap: 1rem;
-    text-decoration: none; color: inherit;
-  }
-  ol.toc a:hover .t { color: var(--accent); }
-  ol.toc .n {
-    color: var(--accent); font-weight: 700; min-width: 2.4rem;
-    font-variant-numeric: lining-nums;
-  }
-  ol.toc .t { font-weight: 700; }
-  ol.toc .s { color: var(--muted); font-size: 0.95rem; margin-left: auto; text-align: right; display: none; }
-  @media (min-width: 40rem) { ol.toc .s { display: block; } }
-  footer {
-    border-top: 1px solid var(--rule);
-    padding: 2rem 0 4rem;
-    color: var(--muted); font-size: 0.95rem;
-  }
-  footer p { margin-bottom: 0.6rem; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <h1>The Eleven Factors</h1>
   <p class="tagline">If people insist on using AI (and they do), then there should be a set of principles to follow to produce more open, shareable, more efficient, distributable, equitable apps.</p>
-  <p class="robot-note">🤖 The prose on this page was written by a human. Where an LLM's words appear, they are marked, visibly, like this — that's factor <a href="#x">X</a>.</p>
+  <p class="robot-note">🤖 The prose on this page was written by a human. Where an LLM's words appear, they are marked, visibly, like this — that's factor <a href="x/">X</a>.</p>
 </header>
 
 <!-- 👨 The prose below was written by a human; only passages carrying a visible 🤖 are LLM-written. -->
@@ -122,150 +29,37 @@
   <p>The eleven factors are an attempt to map out that new path. What is the value of code when it can be manufactured at scale? What are our responsibilities as software developers when anyone can use the same tools that we do just by asking? Are there opportunities and efficiencies that we missed while we burned other people’s money in a frenzied attempt to make them more money?</p>
   <p>The eleven factors imagines that there are.</p>
 
-  <ol class="toc">
-    <li><a href="#i"><span class="n">I.</span> <span class="t">Trust no one</span> <span class="s">Secure systems with technology in addition to policy</span></a></li>
-    <li><a href="#ii"><span class="n">II.</span> <span class="t">Let kids play</span> <span class="s">If it isn't safe for a child, it isn't safe</span></a></li>
-    <li><a href="#iii"><span class="n">III.</span> <span class="t">Encrypt everything</span> <span class="s">What can be hacked will be hacked</span></a></li>
-    <li><a href="#iv"><span class="n">IV.</span> <span class="t">Great design is for everyone</span> <span class="s">Care is not a premium tier</span></a></li>
-    <li><a href="#v"><span class="n">V.</span> <span class="t">Intent is the system</span> <span class="s">How closely does a system get to what it was designed to do?</span></a></li>
-    <li><a href="#vi"><span class="n">VI.</span> <span class="t">Built by humanity, owned by humanity</span> <span class="s">Software built with AI should be open source</span></a></li>
-    <li><a href="#vii"><span class="n">VII.</span> <span class="t">Self-hosting is a right</span> <span class="s">If you can't run it yourself, you don't own it</span></a></li>
-    <li><a href="#viii"><span class="n">VIII.</span> <span class="t">Many small things</span> <span class="s">Greater than one big thing</span></a></li>
-    <li><a href="#ix"><span class="n">IX.</span> <span class="t">Inefficient builds efficient</span> <span class="s">Justify ecological cost by building ecological efficiency</span></a></li>
-    <li><a href="#x"><span class="n">X.</span> <span class="t">Humans come first</span> <span class="s">AI is opt-in, never required, always disclosed</span></a></li>
-    <li><a href="#xi"><span class="n">XI.</span> <span class="t">Centralised infrastructure is glue</span> <span class="s">Thin, blind, replaceable</span></a></li>
+  <ol class="toc" id="contents">
+    <li id="i"><a href="i/"><span class="n">I.</span> <span class="t">Trust no one</span> <span class="s">Secure systems with technology in addition to policy</span></a></li>
+    <li id="ii"><a href="ii/"><span class="n">II.</span> <span class="t">Let kids play</span> <span class="s">If it isn't safe for a child, it isn't safe</span></a></li>
+    <li id="iii"><a href="iii/"><span class="n">III.</span> <span class="t">Encrypt everything</span> <span class="s">What can be hacked will be hacked</span></a></li>
+    <li id="iv"><a href="iv/"><span class="n">IV.</span> <span class="t">Great design is for everyone</span> <span class="s">Care is not a premium tier</span></a></li>
+    <li id="v"><a href="v/"><span class="n">V.</span> <span class="t">Intent is the system</span> <span class="s">How closely does a system get to what it was designed to do?</span></a></li>
+    <li id="vi"><a href="vi/"><span class="n">VI.</span> <span class="t">Built by humanity, owned by humanity</span> <span class="s">Software built with AI should be open source</span></a></li>
+    <li id="vii"><a href="vii/"><span class="n">VII.</span> <span class="t">Self-hosting is a right</span> <span class="s">If you can't run it yourself, you don't own it</span></a></li>
+    <li id="viii"><a href="viii/"><span class="n">VIII.</span> <span class="t">Many small things</span> <span class="s">Greater than one big thing</span></a></li>
+    <li id="ix"><a href="ix/"><span class="n">IX.</span> <span class="t">Inefficient builds efficient</span> <span class="s">Justify ecological cost by building ecological efficiency</span></a></li>
+    <li id="x"><a href="x/"><span class="n">X.</span> <span class="t">Humans come first</span> <span class="s">AI is opt-in, never required, always disclosed</span></a></li>
+    <li id="xi"><a href="xi/"><span class="n">XI.</span> <span class="t">Centralised infrastructure is glue</span> <span class="s">Thin, blind, replaceable</span></a></li>
   </ol>
 </section>
 
-<section id="i">
-  <h2><a href="#i"><span class="numeral">I.</span> Trust no one</a></h2>
-  <p class="epigraph">"Didn't I warn you not to trust anybody, Dr.&nbsp;Jones?"</p>
-  <p>In the 15 years since 2011, there are those of us who have been consistently let down by people we once considered heroes and inspirations. Google’s "don't be evil" mantra turned out to be vacuous at best, and wherever they’ve been able, they've sought to monopolise any space they enter or burn beloved products after they decided they didn't want to run them any more. Big companies with millions and billions of users have forced a set of complicated tools on a generation of software developers who think they need heavy machinery instead of simple tools.</p>
-  <p>Data has been sucked from us relentlessly. Seemingly well meaning folks celebrate shifts in the Overton window, and people excuse fascism, sexism, racism, homophobia, transphobia and whatever else they can in an effort to provoke outrage and distract from their exploitation of entire populations to make a buck on a buck.</p>
-  <p>Trust has been eroded, and Walter Donovan’s message from "Indiana Jones and the Last Crusade" rings true.</p>
-  <p>We’ve all been taken for a ride. Trust needs to be earned, not assumed.</p>
-</section>
 
-<section id="ii">
-  <h2><a href="#ii"><span class="numeral">II.</span> Let kids play</a></h2>
-  <p class="epigraph">If it isn't safe for a child, it isn't safe.</p>
-  <p>The world is up in arms over the harms that can come to kids by the use of technology that has been created with addictive algorithms, which big companies deny existing. What do we do? We ban the technology from kids.</p>
-  <p>BANS DO NOT WORK. There are literally speakeasies in every city in the world that celebrate the golden age of alcohol distribution in the United States when alcohol was prohibited.</p>
-  <p>Have you ever met a child? The surest way of making them want something more is to take it away from them.</p>
-  <p>Meanwhile, the companies that produce the garbage that gets forced upon kids with those dubious algorithms face little to no accountability for allowing this to continue.</p>
-  <p>If it’s not safe for a kid to use, it isn’t safe. And a corollary: the technology that we use to secure our own digital space should also be applied to the spaces that our kids get to use.</p>
-  <p>Age verification is not the answer: building systems that protect ourselves and our children is. Surveillance is not the answer: we should be teaching kids how to have a positive relationship with technology, not using it to oppress them. We need to respect our children.</p>
-  <p>Here’s how the robots put it: 🤖 Building for kids forces honest defaults: private by default, no strangers by surprise, no dark patterns, no engagement mechanics tuned against an unfinished brain, no data trail that follows them into adulthood. It rules out entire business models — deliberately.</p>
-  <p>Just like accessibility is for everyone, including kids in the design from day one makes it safer for everyone.</p>
-</section>
 
-<section id="iii">
-  <h2><a href="#iii"><span class="numeral">III.</span> Encrypt everything</a></h2>
-  <p class="epigraph">🤖 What can be hacked will be hacked.</p>
-  <p>Every other week we hear about the latest database that has been hacked, leaking our email addresses, our phone number, our home address and more. There’s hardly a person on the planet who uses software online that hasn’t had some of their data leaked.</p>
-  <p>Crank calls, offers to sell crypto, cold emails from unscrupulous actors. Just out there for anyone to share. And all we can do is shrug.</p>
-  <p>HOW ARE WE OK WITH THIS?</p>
-  <p>Encryption technology is a mature field at this point. Every major software environment ships with advanced tools to encrypt data. Large companies who don’t sell fruit have forged a path as stewards of data, unlike other companies who have acted as data brokers, and we have collectively conceded a false truth: we don't care.</p>
-  <p>The first question anyone should ask of their software vendor is: how is it encrypted?</p>
-  <p>In the sorry absence of that question, every software vendor should ask themselves: do I want this data?</p>
-  <p>Unless it’s absolutely paramount to have access, the answer should always be no.</p>
-  <p>A weaker version of "encrypt everything" can also be: "separate everything" so that no customer data is mixed, and the attack surface for any customer is limited to just that customer.</p>
-</section>
 
-<section id="iv">
-  <h2><a href="#iv"><span class="numeral">IV.</span> Great design is for everyone</a></h2>
-  <p class="epigraph">Care is not a premium tier.</p>
-  <p>It’s hard to quantify great design, but it seems that the more secure something gets, the more compromises on how the product feels, and acts, and responses we accept. The result is that people tend towards less secure options that are better designed because they’re more convenient, more conforming.</p>
-  <p>Software (and a lot of technology in general) is a field where folks expect things to work frictionlessly, even without training. Great design can add to that.</p>
-  <p>Too many well-intentioned projects fail because their creators don’t have the time and resources to iterate to the point where they compete with products whose designers are paid far too much to make people want things they don’t need.</p>
-  <p>AI has the potential to level that field, and to bring an unrelenting ethic to user experience that has hitherto been economically unfeasible. Practitioners are still required to put the work in, but under-resourced individual practitioners can now do the work that perhaps teams were required to in the past.</p>
-</section>
 
-<section id="v">
-  <h2><a href="#v"><span class="numeral">V.</span> Intent is the system</a></h2>
-  <p class="epigraph">How closely does a system get to what it was designed to do?</p>
-  <p>Until very recently, good code has been the differentiating factor between good software and great. In 2026, that changed, with the expanding capabilities of computers to generate code on a par or in excess of the abilities of many software developers.</p>
-  <p>One positive benefit of this is that it expands the overall capabilities of individual software makers far beyond their skillset. It’s still important that software code functions, that it is tested, verified, and audited. Good software development practices still matter, LLM tools themselves are also very good at following good practices if directed toward them, of reviewing their own work, refactoring, and systematically following process.</p>
-  <p>When code is no longer the asset it once was, the value of a system shifts. If code is no longer the asset, the new asset is: what is the system supposed to do? The measure is: does it do what it is supposed to do?</p>
-  <p>Imagine as a user of a system, you were able to evaluate the decisions that went into shaping the system, both well-intentioned and the not-so-well intentioned. "Intent is the system" leads to asking whether these kinds of things are possible. What if, in addition to the code, we shared the ideas that led to the code? This leads to open record-keeping, like an open prompt ledger for AI-created systems, and potentially an open decision ledger for non-AI systems.</p>
-</section>
 
-<section id="vi">
-  <h2><a href="#vi"><span class="numeral">VI.</span> Built by humanity, owned by humanity</a></h2>
-  <p class="epigraph">Software built with AI should be open source.</p>
-  <p>There are those who believe that the way in which AI systems have been trained constitutes theft. There are others who say that public data was fair game to ingest since it was public. What nobody disagrees on: the data was used to train systems without the explicit consent of the authors.</p>
-  <p>There are ideologies and science fiction alike that believe that everything created by any human ought to immediately transfer into the public domain, share-and-share-alike. Today’s society hasn’t yet reached that pinnacle of the commons, and so copyright and private ownership of one’s own works prevail.</p>
-  <p>However, never before have we had such ambiguity about where the skills and ideas and intent of the creator ends and the synthesis of all that came before begins. We are in interesting times.</p>
-  <p>It seems though, that logically, if a tool synthesises as much of humanity’s collected knowledge as its creators could ingest to train it, then the moral obligation on the user of that tool is to return the output to the collective.</p>
-  <p>For software, the conclusion is that there ought to be no other software than open source. And further, if open source software becomes as convenient, as reliable, as easy-to-adopt, and as secure as proprietary software, then the only differentiator between open source and proprietary becomes: trust. Finally, if trust is final differentiator, who will you trust more: the vendor whose code is open source that you or others can scrutinise and verify, or the vendor who chooses to keep theirs private?</p>
-</section>
 
-<section id="vii">
-  <h2><a href="#vii"><span class="numeral">VII.</span> Self-hosting is a right</a></h2>
-  <p class="epigraph">🤖 If you can't run it yourself, you don't own it.</p>
-  <p>Infrastructure models for computing ebb and flow. Thin-client interfacing with a mainframe. On premise everything. The evolution of SaaS where computers more powerful than the servers they run on consume services via thin web clients. And now the same is happening with AI.</p>
-  <p>Self-hosting is almost always the wrong approach when building resilient systems, and almost always the right approach when building secure, and indeed sovereign ones. The full eleven factors make the case that self-hosting ought not necessarily be required for security, but the seventh factor is that it should always be possible, without compromise.</p>
-  <p>Eleven factor software, in an absolute sense, should essentially be uncontrollable, unbuyable by an external party. If, at any time, someone who uses an eleven factor app decides that they want to run it on their own hardware, this should be built in.</p>
-  <p>The ideal of this model is that self-hosting is not penalised in any way, unless a decision is made explicitly.</p>
-  <p>In practice, this means: self-hosting and "cloud" hosting are functionally the same. Self-hosters gain access to relay services, broker services etc. to allow for a "great-design" experience, but none of the centralised infrastructure is required.</p>
-  <p>Finally, at any point, the self-hoster should be able to decide to pin to any version and no longer receive updates they don't want. Most folks will want to be on the latest stable release, but that is a choice, not an enforcement.</p>
-</section>
 
-<section id="viii">
-  <h2><a href="#viii"><span class="numeral">VIII.</span> Many small things</a></h2>
-  <p class="epigraph">Greater than one big thing.</p>
-  <p>There are people who think that monopolies are the singular goal of system creation. This factor rejects that. There are those who think that big systems should be broken down into tiny parts to the nth degree. This factor also doesn’t fully accept that.</p>
-  <p>This factor is about building resilience into the system, rather than breaking things apart, and not necessarily splitting systems into tiny parts, but making complex systems deployable in small units.</p>
-  <p>The systems-thinking here is inspired by rebel cells (see <a href="https://memory-alpha.fandom.com/wiki/Bajoran_Resistance">the Bajoran resistance</a>). Small autonomous units: take one out and the rest continues. Each unit is capable of a wide range of abilities, not just a thin-slice (e.g. this isn't the unix philosophy, although that feeds in).</p>
-  <p>"Many small things" is also inspired by healthy biological systems, as opposed to the proliferation of hypergrowth cells that eventually poison the host and suck the life out of the system. In biology, we call that cancer.</p>
-  <p>Many small things are more securable. Attack targets become more distributed. The economics of breaking into any cell—or instance—become lower return on effort.</p>
-  <p>Small systems are also much easier to understand, to distribute, and to run locally.</p>
-  <p>Small systems are easier to modify, to customise, and ultimately, to own.</p>
-  <p>The result: every user of software systems built this way is in control: control of where their compute and storage is hosted, control of whether they receive automatic updates, control of whether they update at all.</p>
-</section>
 
-<section id="ix">
-  <h2><a href="#ix"><span class="numeral">IX.</span> Inefficient builds efficient</a></h2>
-  <p class="epigraph">Justify ecological cost by building ecological efficiency.</p>
-  <p>One of the most scathing criticisms of AI is the dismantling of trends towards reducing the carbon footprint and ecological impact of technology. "Build more data centres!" "Buy up all the RAM!" "More GPUs!".</p>
-  <p>The land-grab towards "AI all the things" without considering the impact is typical of an industry that has spent 20 years taking, taking, taking and never asking first.</p>
-  <p>Citing AI’s proliferation as "inevitable", and attempting to force it into every aspect of our daily lives and society is as short-sighted and annoying as it is morally reprehensible in a climate emergency. We’ve seen this before with cars, and a systemic campaign over 100 years to villainise harmless pedestrians and cyclists without acknowledging that people in cars are one small slip away from causing death from the moment they start the engine.</p>
-  <p>This isn’t to say cars are not amazing. They enrich people’s lives and unlock possibilities beyond imagining before their creation. Cars have their place across a wide range of purposes.</p>
-  <p>There is a similarity here with AI. Where cars have been forced upon us to do tasks that would be orders of magnitude more efficient on, for example, a bicycle, AI is mooted as the solution for everything.</p>
-  <p>There is another analogy: factories. Factories sit at the intersection of innovation and regression: the ability to mass produce items at great ecological cost. Factories that produce cars amplify the problem, where factories that produce bicycles justify their cost by producing clean, efficient outputs.</p>
-  <p>One more: plastic. Plastic has allowed us to produce complex solutions at lower cost than more natural ingredients. But of course, plastics ended up being over-used and we ended up with the proliferation of single-use plastics for things (like bottles) that would be better off with more sustainable solutions. Same goes for the proliferation of single-use AI-generated tools.</p>
-  <p>Listen to how the robots describe themselves:</p>
-  <blockquote><p>🤖 A large language model is a spectacularly inefficient way to compute anything — and the finest tool ever made for creating things that compute efficiently. That is not a paradox; it is a division of labour as old as tooling. The kiln burns hot so the brick doesn't have to.</p></blockquote>
-  <p>It’s worth considering that cutting edge systems that burn carbon may well be justified to create efficient systems that run on old hardware with performance that today’s mid-range systems can only dream of.</p>
-</section>
 
-<section id="x">
-  <h2><a href="#x"><span class="numeral">X.</span> Humans come first</a></h2>
-  <p class="epigraph">AI is opt-in, never required, always disclosed.</p>
-  <p>Surely this is just common sense? It’s very tempting to leap ahead to a science fiction world where anything is replicable on demand. That world is yet to arrive. In the meantime, building software that cannot be operated by humans seems foolhardy.</p>
-  <p>Software for humans built by humans should be usable, reworkable, and maintainable by humans, no matter the tooling. AI systems are great at synthesis: taking existing ideas and using them to produce new output. Whether they become great at invention remains to be seen, but a human operator with LLM assistance has access to a larger library: tools and abilities that were out of reach for the sheer effort of researching all of the options.</p>
-  <p>The old adage is "the best tool for the job", which has always been bendable to fit any software choice, but with assistance, choosing "the best tool for the job" is within reach for any category: particularly when it comes to choosing tools, built by humans, that already exist to solve human-shaped problems.</p>
-  <p>Building for human maintainability leads to naturally more resilient systems, and the added benefit is that since AI is trained on human-shaped patterns, tools optimised for humans tend to work better for AIs too.</p>
-  <p>The final pièce de résistance of this factor is that it is truly inclusive: building for humans with AI does not preclude humans using the systems without AI.</p>
-</section>
-
-<section id="xi">
-  <h2><a href="#xi"><span class="numeral">XI.</span> Centralised infrastructure is glue</a></h2>
-  <p class="epigraph">Thin, blind, replaceable.</p>
-  <p>The final factor is the piece that takes all the principles above and compels us to build systems that feel uncompromising in their user-experience and ability to get started. The previous ten factors are not novel. All of them have examples and working models in the wild. What seems rarer are systems that contain all the factors, and conform to a standard of design and aesthetics, form and function that means they are usable by everyone.</p>
-  <p>To turn to wit: open-source products and systems, self-hosted tools and services are not "sticky". Deploying open-source and self-hosted systems at scale often comes with costs: overhead of setup, overhead of maintenance, conceptual overhead to carry for the people who want to use the systems. Proprietary systems tend to be more turn-key: much less conceptual overhead to get started.</p>
-  <p>Glue infrastructure aims to create the illusion of centralisation without the traditional compromises, whilst remaining decentralised, with self-hosting as first class.</p>
-  <p>Examples of glue infrastructure: credential vaults, push-notification relays, oauth brokers, image and service proxies. All of these services can be provided to instances in a decentralised system without compromising the security of the instances. Glue infrastructure exists to make using the system seamless for those who value simplicity and efficiency. One signin: all your stuff. "🤖 Complexity is hidden, never revealed."</p>
-  <p>For those who wish to self-host, glue infrastructure is offered as optional, but not required, and for those who wish to host their own glue infrastructure, that’s always a configuration change away.</p>
-  <p>When you want to make your open-source, decentralised system sticky, bring the glue.</p>
-</section>
 
 </main>
 
 <footer>
-  <p>🤖 The factors above were written by a human; the passages marked 🤖 — and this note — were written by an LLM (Claude). AI-written text here is always marked and always disclosed — see factor <a href="#x">X</a>, and the <a href="https://github.com/elevenmessenger/11factor">authorship rule in the repo</a>.</p>
+  <p>🤖 The factors above were written by a human; the passages marked 🤖 — and this note — were written by an LLM (Claude). AI-written text here is always marked and always disclosed — see factor <a href="x/">X</a>, and the <a href="https://github.com/elevenmessenger/11factor">authorship rule in the repo</a>.</p>
   <p>The Eleven factors started as a serious parody of, and with respect and gratitude to, <a href="https://12factor.net">The Twelve-Factor App</a> by Adam Wiggins and the crew at Heroku. We present them as a set of principles to follow if you must use AI, and a set of guidelines for using AI effectively and efficiently to build better systems. Informed, along the way, by building <a href="https://elevenmessenger.com">Eleven</a>.</p>
-  <p><a href="https://github.com/elevenmessenger/11factor">Source on GitHub</a> — open, of course (factor <a href="#vi">VI</a>).</p>
+  <p><a href="https://github.com/elevenmessenger/11factor">Source on GitHub</a> — open, of course (factor <a href="vi/">VI</a>).</p>
 </footer>
 
 </body>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XI. Centralised infrastructure is glue · The Eleven Factors</title>
+<meta name="description" content="Thin, blind, replaceable">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- 👨 The prose below was written by a human; only passages carrying a visible 🤖 are LLM-written. -->
+<header>
+  <p class="back"><a href="../">The Eleven Factors</a></p>
+  <h1><span class="numeral">XI.</span> Centralised infrastructure is glue</h1>
+  <p class="epigraph">Thin, blind, replaceable.</p>
+  <p class="robot-note">🤖 The prose on this page was written by a human. Where an LLM's words appear, they are marked, visibly, like this — that's factor <a href="../x/">X</a>.</p>
+</header>
+
+<main>
+<article>
+  <p>The final factor is the piece that takes all the principles above and compels us to build systems that feel uncompromising in their user-experience and ability to get started. The previous ten factors are not novel. All of them have examples and working models in the wild. What seems rarer are systems that contain all the factors, and conform to a standard of design and aesthetics, form and function that means they are usable by everyone.</p>
+  <p>To turn to wit: open-source products and systems, self-hosted tools and services are not "sticky". Deploying open-source and self-hosted systems at scale often comes with costs: overhead of setup, overhead of maintenance, conceptual overhead to carry for the people who want to use the systems. Proprietary systems tend to be more turn-key: much less conceptual overhead to get started.</p>
+  <p>Glue infrastructure aims to create the illusion of centralisation without the traditional compromises, whilst remaining decentralised, with self-hosting as first class.</p>
+  <p>Examples of glue infrastructure: credential vaults, push-notification relays, oauth brokers, image and service proxies. All of these services can be provided to instances in a decentralised system without compromising the security of the instances. Glue infrastructure exists to make using the system seamless for those who value simplicity and efficiency. One signin: all your stuff. "🤖 Complexity is hidden, never revealed."</p>
+  <p>For those who wish to self-host, glue infrastructure is offered as optional, but not required, and for those who wish to host their own glue infrastructure, that’s always a configuration change away.</p>
+  <p>When you want to make your open-source, decentralised system sticky, bring the glue.</p>
+</article>
+
+<nav class="pager">
+  <a class="prev" rel="prev" href="../x/">← X. Humans come first</a>
+  <a class="next" href="../#contents">All eleven factors →</a>
+</nav>
+</main>
+
+<footer>
+  <p>🤖 This factor was written by a human. The passages marked 🤖, and this note, were written by an LLM (Claude). AI-written text here is always marked and always disclosed. See factor <a href="../x/">X</a>, and <a href="https://github.com/elevenmessenger/11factor">the authorship rule in the repo</a>.</p>
+  <p>Part of <a href="../">The Eleven Factors</a>. The source is <a href="https://github.com/elevenmessenger/11factor">on GitHub</a>, and open, of course (factor <a href="../vi/">VI</a>).</p>
+</footer>
+
+</body>
+</html>
